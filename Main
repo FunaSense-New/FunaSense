@@ -18,11 +18,11 @@ local osdate = os.date
 
 --// Launching
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Roblox-Functions-Library/main/Library.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FunaSense-New/FunaSense/refs/heads/main/Libary1"))()
 
-local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/FunaSense-V2/main/src/UI%20Library.lua"))()
-local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Exunys-ESP/main/src/ESP.lua"))()
-local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/Aimbot-V3/main/src/Aimbot.lua"))()
+local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/FunaSense-New/FunaSense/refs/heads/main/Libary2FU"))()
+local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/FunaSense-New/FunaSense/refs/heads/main/ESP"))()
+local Aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/FunaSense-New/FunaSense/refs/heads/main/Aimbot"))()
 
 --// Variables
 
@@ -922,24 +922,6 @@ ProfilesSection:Button({
 	Callback = function()
 		GUI:SaveConfig(GUI.flags["Config Dropdown"] or GUI.flags["Config Name"])
 		ConfigList:Refresh(GUI:GetConfigs())
-	end
-})
-
-InformationSection:Label("Made by Exunys")
-
-InformationSection:Button({
-	Name = "Copy GitHub",
-	Callback = function()
-		setclipboard("https://github.com/Exunys")
-	end
-})
-
-InformationSection:Label("AirTeam © 2022 - "..osdate("%Y"))
-
-InformationSection:Button({
-	Name = "Copy Discord Invite",
-	Callback = function()
-		setclipboard("https://discord.gg/Ncz3H3quUZ")
 	end
 })
 
