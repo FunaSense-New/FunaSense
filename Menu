@@ -4,23 +4,23 @@ local loadstring, getgenv, setclipboard, tablefind, UserInputService = loadstrin
 
 --// Loaded check
 
-if AirHub or AirHubV2Loaded then
+if FunaSense or FunaSenseV2Loaded then
     return
 end
 
 --// Environment
 
-getgenv().AirHub = {}
+getgenv().FunaSense = {}
 
 --// Load Modules
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/Modules/Aimbot.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/Modules/Wall%20Hack.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FunaSense-New/FunaSense/refs/heads/main/Aimbot"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FunaSense-New/FunaSense/refs/heads/main/ESP"))()
 
 --// Variables
 
 local Library = loadstring(game:GetObjects("rbxassetid://7657867786")[1].Source)() -- Pepsi's UI Library
-local Aimbot, WallHack = getgenv().AirHub.Aimbot, getgenv().AirHub.WallHack
+local Aimbot, WallHack = getgenv().FunaSense.Aimbot, getgenv().FunaSense.WallHack
 local Parts, Fonts, TracersType = {"Head", "HumanoidRootPart", "Torso", "Left Arm", "Right Arm", "Left Leg", "Right Leg", "LeftHand", "RightHand", "LeftLowerArm", "RightLowerArm", "LeftUpperArm", "RightUpperArm", "LeftFoot", "LeftLowerLeg", "UpperTorso", "LeftUpperLeg", "RightFoot", "RightLowerLeg", "LowerTorso", "RightUpperLeg"}, {"UI", "System", "Plex", "Monospace"}, {"Bottom", "Center", "Mouse"}
 
 --// Frame
@@ -28,18 +28,18 @@ local Parts, Fonts, TracersType = {"Head", "HumanoidRootPart", "Torso", "Left Ar
 Library.UnloadCallback = function()
 	Aimbot.Functions:Exit()
 	WallHack.Functions:Exit()
-	getgenv().AirHub = nil
+	getgenv().FunaSense = nil
 end
 
 local MainFrame = Library:CreateWindow({
-	Name = "AirHub",
+	Name = "FunaSense",
 	Themeable = {
 		Image = "7059346386",
 		Info = "Made by Exunys\nPowered by Pepsi's UI Library",
 		Credit = false
 	},
 	Background = "",
-	Theme = [[{"__Designer.Colors.topGradient":"3F0C64","__Designer.Colors.section":"C259FB","__Designer.Colors.hoveredOptionBottom":"4819B4","__Designer.Background.ImageAssetID":"rbxassetid://4427304036","__Designer.Colors.selectedOption":"4E149C","__Designer.Colors.unselectedOption":"482271","__Designer.Files.WorkspaceFile":"AirHub","__Designer.Colors.unhoveredOptionTop":"310269","__Designer.Colors.outerBorder":"391D57","__Designer.Background.ImageColor":"69009C","__Designer.Colors.tabText":"B9B9B9","__Designer.Colors.elementBorder":"160B24","__Designer.Background.ImageTransparency":100,"__Designer.Colors.background":"1E1237","__Designer.Colors.innerBorder":"531E79","__Designer.Colors.bottomGradient":"361A60","__Designer.Colors.sectionBackground":"21002C","__Designer.Colors.hoveredOptionTop":"6B10F9","__Designer.Colors.otherElementText":"7B44A8","__Designer.Colors.main":"AB26FF","__Designer.Colors.elementText":"9F7DB5","__Designer.Colors.unhoveredOptionBottom":"3E0088","__Designer.Background.UseBackgroundImage":false}]]
+	Theme = [[{"__Designer.Colors.topGradient":"3F0C64","__Designer.Colors.section":"C259FB","__Designer.Colors.hoveredOptionBottom":"4819B4","__Designer.Background.ImageAssetID":"rbxassetid://4427304036","__Designer.Colors.selectedOption":"4E149C","__Designer.Colors.unselectedOption":"482271","__Designer.Files.WorkspaceFile":"FunaSense","__Designer.Colors.unhoveredOptionTop":"310269","__Designer.Colors.outerBorder":"391D57","__Designer.Background.ImageColor":"69009C","__Designer.Colors.tabText":"B9B9B9","__Designer.Colors.elementBorder":"160B24","__Designer.Background.ImageTransparency":100,"__Designer.Colors.background":"1E1237","__Designer.Colors.innerBorder":"531E79","__Designer.Colors.bottomGradient":"361A60","__Designer.Colors.sectionBackground":"21002C","__Designer.Colors.hoveredOptionTop":"6B10F9","__Designer.Colors.otherElementText":"7B44A8","__Designer.Colors.main":"AB26FF","__Designer.Colors.elementText":"9F7DB5","__Designer.Colors.unhoveredOptionBottom":"3E0088","__Designer.Background.UseBackgroundImage":false}]]
 })
 
 --// Tabs
@@ -894,11 +894,11 @@ FunctionsSection:AddButton({
 FunctionsSection:AddButton({
 	Name = "Copy Script Page",
 	Callback = function()
-		setclipboard("https://github.com/Exunys/AirHub")
+		setclipboard("https://github.com/Exunys/FunaSense")
 	end
 })
 
---// AirHub V2 Prompt
+--// FunaSense V2 Prompt
 
 do
 	local Aux = Instance.new("BindableFunction")
@@ -909,16 +909,6 @@ do
 		end
 
 		Library.Unload()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub-V2/main/src/Main.lua"))()
-	end
-
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "🎆  AirHub V2  🎆",
-		Text = "Would you like to use the new AirHub V2 script?",
-		Button1 = "Yes",
-		Button2 = "No",
-		Duration = 1 / 0,
-		Icon = "rbxassetid://6238537240",
-		Callback = Aux
+		loadstring(game:HttpGet("https://github.com/FunaSense-New/FunaSense/blob/main/Main"))()
 	})
 end
