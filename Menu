@@ -902,6 +902,16 @@ do
 		end
 
 		Library.Unload()
-		loadstring(game:HttpGet("https://github.com/FunaSense-New/FunaSense/blob/main/Main"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub-V2/main/src/Main.lua"))()
+	end
+
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "🎆  FunaSense V2  🎆",
+		Text = "Would you like to use the new FunaSense V2 script?",
+		Button1 = "Yes",
+		Button2 = "No",
+		Duration = 1 / 0,
+		Icon = "rbxassetid://6238537240",
+		Callback = Aux
 	})
 end
