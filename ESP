@@ -5,7 +5,7 @@ local WorldToViewportPoint, Vector2new, Vector3new, Vector3zero, CFramenew, Draw
 
 --// Launching checks
 
-if not getgenv().FunaSebse or getgenv().FunaSebse.WallHack then return end
+if not getgenv().FunaSense or getgenv().FunaSense.WallHack then return end
 
 --// Services
 
@@ -21,7 +21,7 @@ local ServiceConnections = {}
 
 --// Environment
 
-getgenv().FunaSebse.WallHack = {
+getgenv().FunaSense.WallHack = {
 	Settings = {
 		Enabled = false,
 		TeamCheck = false,
@@ -120,7 +120,7 @@ getgenv().FunaSebse.WallHack = {
 	WrappedPlayers = {}
 }
 
-local Environment = getgenv().FunaSebse.WallHack
+local Environment = getgenv().FunaSense.WallHack
 
 --// Core Functions
 
@@ -858,8 +858,8 @@ function Environment.Functions:Exit()
 		end
 	end
 
-	getgenv().FunaSebse.WallHack.Functions = nil
-	getgenv().FunaSebse.WallHack = nil
+	getgenv().FunaSense.WallHack.Functions = nil
+	getgenv().FunaSense.WallHack = nil
 
 	Load = nil; GetPlayerTable = nil; AssignRigType = nil; InitChecks = nil; UpdateCham = nil; Visuals = nil; Wrap = nil; UnWrap = nil
 end
