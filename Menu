@@ -160,13 +160,13 @@ Aimbot.Settings.LockPart = Parts[1]; Values:AddDropdown({
 	Nothing = "Head"
 }).Default = Parts[1]
 
-Values:AddTextbox({ -- Using a Textbox instead of a Keybind because the UI Library doesn't support Mouse inputs like Left Click / Right Click...
-	Name = "Hotkey",
-	Value = Aimbot.Settings.TriggerKey,
-	Callback = function(New, Old)
-		Aimbot.Settings.TriggerKey = New
-	end
-}).Default = Aimbot.Settings.TriggerKey
+--Values:AddTextbox({ -- Using a Textbox instead of a Keybind because the UI Library doesn't support Mouse inputs like Left Click / Right Click...
+	--Name = "Hotkey",
+	--Value = Aimbot.Settings.TriggerKey,
+	--Callback = function(New, Old)
+		--Aimbot.Settings.TriggerKey = New
+	--end
+--}).Default = Aimbot.Settings.TriggerKey
 
 
 Values:AddKeybind({
