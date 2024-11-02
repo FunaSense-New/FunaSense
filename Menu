@@ -902,6 +902,6 @@ do
 		end
 
 		Library.Unload()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub-V2/main/src/Main.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FunaSense-New/FunaSense/refs/heads/main/Main"))()
 	end
 end
