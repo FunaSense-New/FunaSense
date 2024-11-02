@@ -35,7 +35,7 @@ local MainFrame = Library:CreateWindow({
 	Name = "FunaSense",
 	Themeable = {
 		Image = "7059346386",
-		Info = "Made by Exunys\nPowered by Pepsi's UI Library",
+		Info = "",
 		Credit = false
 	},
 	Background = "",
