@@ -160,6 +160,13 @@ Aimbot.Settings.LockPart = Parts[1]; Values:AddDropdown({
 	Nothing = "Head"
 }).Default = Parts[1]
 
+Values:AddKeybind({
+	Name = "Hotkey",
+	Value = Aimbot.Settings.TriggerKey,
+	Callback = function(New, Old)
+		Aimbot.Settings.TriggerKey = stringmatch(tostring(New), "Enum%.[UserInputType]*[KeyCode]*%.(.+)")
+	end,
+}).Default = Aimbot.Settings.TriggerKey
 
 Values:AddSlider({
 	Name = "Sensitivity",
